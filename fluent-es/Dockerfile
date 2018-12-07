@@ -1,6 +1,6 @@
-FROM fluent/fluentd:latest
+FROM fluent/fluentd:v1.3.1-debian-onbuild
 
-USER fluent
+USER root
 WORKDIR /home/fluent
 ENV PATH /home/fluent/.gem/ruby/2.2.0/bin:$PATH
 RUN gem install fluent-plugin-elasticsearch
